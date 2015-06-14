@@ -14,7 +14,9 @@ function gui2cterm(str) {
     if (line.indexOf('guibg') < 0) return line;
     var fg = /guifg=(#?\w+)\s/g.exec(line)[1];
     var bg = /guibg=(#?\w+)\s/g.exec(line)[1];
-    return line.replace(/ctermfg=(#?\w+)\s/g, 'ctermfg=' + getX256(fg) + ' ').replace(/ctermbg=(#?\w+)\s/g, 'ctermbg=' + getX256(bg) + ' ');
+    var xFg = fg.toLowerCase() === 'none' ? 'NONE' : getX256(fg);
+    var xBg = bg.toLowerCase() === 'none' ? 'NONE' : getX256(bg);
+    return line.replace(/ctermfg=(#?\w+)\s/g, 'ctermfg=' + xFg + ' ').replace(/ctermbg=(#?\w+)\s/g, 'ctermbg=' + xBg + ' ');
   }).join('\n');
 }
 
