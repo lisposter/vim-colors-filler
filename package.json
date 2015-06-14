@@ -1,0 +1,30 @@
+{
+  "name": "vim-colors-filler",
+  "version": "0.1.0",
+  "description": "filler color from gui to term or vise versa.",
+  "main": "index.js",
+  "bin": {
+    "gui2cterm": "./bin/gui2cterm.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.2",
+    "mocha": "^1.21.5",
+    "should": "^4.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lisposter/vim-colors-filler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lisposter/vim-colors-filler/issues"
+  },
+  "homepage": "https://github.com/lisposter/vim-colors-filler",
+  "keywords": ["vim","color"],
+  "author": "Leigh Zhu",
+  "license": "MIT"
+}
